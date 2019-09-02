@@ -1,0 +1,397 @@
+.contacts>.site-width {
+  max-width: 100%;
+}
+
+.contacts {
+  position: relative;
+
+  //overflow: hidden;
+  .site-width {
+    position: unset;
+  }
+
+  .contacts-wrapper {
+    display: flex;
+    position: unset;
+
+    @include middle-tablet {
+      flex-direction: column;
+
+      .col {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+  .contacts-left {
+    display: flex;
+  }
+
+  .contacts-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    @include middle-tablet {
+      padding-top: 100px;
+    }
+
+    @include phone {
+      padding: 60px 0;
+      flex-direction: column;
+    }
+  }
+
+  .icon-arrow {
+    fill: $color-black;
+    height: 10px;
+    width: 70px;
+    display: flex;
+    margin-bottom: 5px;
+    margin-left: 20px;
+
+    @include tablet {
+      width: 40px;
+      margin-left: 22px;
+    }
+  }
+
+  .btn-form {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    //tiktak
+    bottom: 0;
+    background-color: $color-yellow;
+    color: $color-black;
+    font-family: $font-bold;
+    font-size: 2rem;
+    padding: 30px;
+    height: 100%;
+    max-height: 160px;
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.3s all linear;
+
+    &:hover {
+      background-color: $color-yellow-2;
+    }
+
+    @include middle-tablet {
+      position: relative;
+      bottom: 0;
+      margin-right: -30px;
+      max-width: 410px;
+      height: 160px;
+    }
+
+    @include tablet {
+      letter-spacing: 0.1rem;
+      line-height: 2.2rem;
+    }
+
+    @include phone {
+      max-width: unset;
+    }
+
+    @include little-phone {
+      margin-right: -10px;
+      width: calc(100% + 10px);
+    }
+  }
+
+  .info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 54px;
+
+    @include tablet {
+      padding-top: 58px;
+      justify-content: flex-start;
+    }
+
+    @include phone {
+      flex-direction: column;
+      padding-top: 0;
+    }
+
+  }
+
+  .contacts-block {
+    margin: 0 auto;
+    max-width: 660px;
+    width: 100%;
+
+    @include middle-tablet {
+      margin: 0;
+    }
+
+    @include tablet {
+      max-width: unset;
+    }
+  }
+
+  .contact-type {
+    font-family: $font-semibold;
+  }
+
+  .location-name {
+    font-size: 2rem;
+    color: $color-white;
+    font-family: $font-regular;
+    letter-spacing: 0.1rem;
+    line-height: 2.2rem;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      font-size: 4.8rem;
+      margin-left: -3px;
+      fill: $color-yellow;
+      transition: all 0.3s linear;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .name {
+      padding-left: 17px;
+    }
+  }
+
+  .location {
+    @include desktop-little {
+      padding: 0 20px;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+
+    @include tablet {
+      width: 100%;
+      max-width: 333px;
+    }
+
+    @include little-phone {
+      padding-left: 0;
+    }
+
+    @include phone {
+      padding-bottom: 60px;
+      padding-left: 0;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .form-mobile {
+    @include phone {
+      margin-right: -30px;
+      margin-top: -160px;
+    }
+
+    @include little-phone {
+      margin-right: -10px;
+    }
+  }
+
+  .location-contacts {
+    font-size: $font-semibold;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+    max-height: 90px;
+    height: 100%;
+    padding-top: 35px;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
+  .email-contact {
+    padding-top: 22px;
+  }
+
+  .contact-links {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+  }
+
+  .contact {
+    padding-top: 12px;
+    font-size: 2rem;
+    color: $color-white;
+    font-family: $font-book;
+    transition: 0.3s all linear;
+
+    &:hover {
+      color: $color-yellow;
+    }
+  }
+
+  .links-wrapper {
+    padding: 0 18px;
+
+    .icon {
+      margin: 0 5px;
+      font-size: 1.7rem;
+      transition: 0.3s all linear;
+
+      &:hover {
+        fill: $color-yellow;
+      }
+    }
+  }
+
+  .quest-block {
+    font-size: 4rem;
+    font-family: $font-semibold;
+    color: $color-white;
+    letter-spacing: 0.2rem;
+    line-height: 4.8rem;
+    position: relative;
+    padding: 40px 0;
+    max-width: 520px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      background-image: url('assets/img/png/contacts-dots.png');
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+      top: 5px;
+      right: -67px;
+      height: 96%;
+      width: 100%;
+
+      @include middle-tablet {
+        display: none;
+      }
+    }
+
+    @include middle-tablet {
+      font-size: 3.6rem;
+    }
+
+    @include tablet {
+      padding-top: 73px;
+      letter-spacing: 0.15rem;
+      line-height: 4.4rem;
+    }
+
+    @include phone {
+      padding-top: 0;
+      font-size: 3rem;
+      line-height: 3.4rem;
+    }
+
+    @include small-phone {
+      padding-top: 20px;
+      line-height: 3.6rem;
+      max-width: 280px;
+    }
+  }
+}
+
+.page-contacts {
+  position: relative;
+  z-index: 0;
+
+  //main{
+  //  //height: calc(100vh - 150px);
+  //  //min-height: 400px;
+  //}
+  .form-warapper {
+    @include phone {
+      display: none;
+    }
+  }
+
+  &:after {
+    position: fixed;
+    content: "";
+    background-image: url('assets/img/png/map.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transform: scaleX(1);
+
+    @include desktop-block {
+      background-size: cover;
+    }
+
+    @include tablet {
+      height: 100vh;
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      background-position: center;
+    }
+    @include phone{
+      background-position: 43%;
+    }
+
+    @include little-phone {
+      // background-position: 100% 100%;
+    }
+  }
+
+  @include middle-tablet {
+    justify-content: flex-start;
+  }
+
+  @include phone {
+    height: auto;
+  }
+
+  header {
+    //@include middle-tablet {
+    //  position: relative;
+    //}
+  }
+  main{
+    @include middle-tablet {
+      padding-top: 100px;
+    }
+  }
+  footer {
+    // position: absolute;
+    // width: 100%;
+    // bottom: 0;
+
+    @include middle-tablet {
+      position: relative;
+      bottom: unset;
+      width: unset;
+      padding-top: 30px;
+    }
+
+    @include phone {
+      position: relative;
+      bottom: unset;
+      width: unset;
+    }
+  }
+}

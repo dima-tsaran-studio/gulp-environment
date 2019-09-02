@@ -1,0 +1,30 @@
+.title-block {
+  .page-title {
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    line-height: 4.4rem;
+    font-family: $font-semibold;
+    color: $color-white;
+    padding: 60px 0;
+
+    // @include desktop-block {
+    //   padding-left: 20px;
+    //   padding-right: 20px;
+    // }
+
+    @include tablet {
+      font-size: 3.6rem;
+      line-height: 3.8rem;
+      padding: 20px 0;
+    }
+
+    @include big-phone {
+      padding: 10px 0px;
+    }
+
+    @include little-phone {
+      font-size: 3.6rem;
+      line-height: 3.8rem;
+    }
+  }
+}

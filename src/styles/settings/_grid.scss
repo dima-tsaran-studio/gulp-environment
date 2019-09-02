@@ -1,0 +1,47 @@
+.site-width {
+  max-width: 1820px;
+  margin: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include tablet {
+    padding: 0 30px;
+  }
+
+  @include little-phone {
+    padding: 0 10px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.col {
+  //flex: 0 0 auto;
+  //max-width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}

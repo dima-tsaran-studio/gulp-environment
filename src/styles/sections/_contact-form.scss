@@ -1,0 +1,606 @@
+.form-wrapper {
+  transition: 0.3s all linear;
+  //transform-origin: right;
+  //transform: scaleX(0);
+  z-index: 102;
+  //position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  //right: 100%;
+
+  width: 50%;
+  max-width: 960px;
+  background-color: $color-yellow;
+  padding: 60px;
+  color: $color-black;
+  font-family: $font-semibold;
+  font-size: 2rem;
+
+  @include middle-tablet {
+    font-size: 1.6rem;
+    padding: 50px;
+  }
+
+  @include tablet {
+    padding-top: 72px;
+  }
+
+  @include little-phone {
+    padding: 20px;
+  }
+
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 2;
+
+  }
+
+  .form-title {
+    padding-bottom: 50px;
+
+    @include menu-tablet {
+      padding-bottom: 20px;
+    }
+    @include tablet{
+      max-width: 275px;
+    }
+    @include phone {
+      padding-bottom: 0;
+    }
+  }
+
+  .form-btn {
+    padding-top: 50px;
+
+    @include menu-tablet {
+      padding-top: 20px;
+    }
+
+    @include phone {
+      padding-top: 20px;
+    }
+  }
+}
+
+.form-mobile {
+  transition: 0.3s all linear;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: 102;
+  position: absolute;
+  top: 0;
+  right: 0;
+  // min-height: 100vh;
+  width: 50%;
+  max-width: 960px;
+  background-color: $color-yellow;
+  padding: 60px;
+  color: $color-black;
+  font-family: $font-semibold;
+  font-size: 2rem;
+
+  @include middle-tablet {
+    font-size: 1.6rem;
+    padding: 50px;
+  }
+
+  @include tablet {
+    padding-top: 72px;
+  }
+
+  @include little-phone {
+    padding: 20px;
+  }
+
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    @include tablet {
+      // justify-content: flex-start;
+    }
+  }
+}
+
+//#backForm {
+.back-form-block{
+  // min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
+  min-height: 100%;
+  width: 75%;
+  //display: none;
+  right: -100%;
+  @include middle-tablet {
+    height: 100%;
+  }
+  @include phone {
+    display: none;
+  }
+  &.form-opened {
+    //display: block;
+    right: 0;
+  }
+  .form-btn {
+    padding-bottom: 30px;
+  }
+
+
+}
+
+.form-inline {
+  //padding: 120px 60px;
+  padding: 120px 125px;
+  display: block;
+  height: auto;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  opacity: 1;
+  transform: scaleX(1);
+
+
+  @include menu-tablet {
+    padding: 40px;
+  }
+
+  @include phone {
+    padding: 10px 20px;
+  }
+}
+
+.form-opened {
+  //transform: scaleX(1);
+  //right: 0;
+}
+
+.form-title {
+  max-width: 500px;
+  font-size: 3.4rem;
+  letter-spacing: 1.4px;
+  line-height: 3.8rem;
+
+  @include middle-tablet {
+    font-size: 2.2rem;
+    padding-top: 15px;
+    line-height: 2.4rem;
+  }
+
+  @include tablet {
+    letter-spacing: 0.12rem;
+    line-height: 2.6rem;
+    max-width: 280px;
+  }
+}
+
+.form-info {
+  letter-spacing: 0.1rem;
+
+  @include tablet {
+    // padding-top: 37px;
+    letter-spacing: 0.08rem;
+  }
+
+}
+
+.form-config {
+  letter-spacing: 0.1rem;
+  padding-top: 60px;
+
+  @include tablet {
+    // padding-top: 27px;
+    letter-spacing: 0.08rem;
+  }
+}
+
+.form-block {
+  padding-left: 34px;
+
+  @include middle-tablet {
+    padding-left: 0;
+  }
+}
+
+.form-head {
+  display: flex;
+  justify-content: space-between;
+
+  &>p {
+    text-align: right;
+  }
+}
+
+.form-budget {
+  max-width: 540px;
+  //padding-top: 15px;
+  padding-top: 35px;
+
+  @include tablet {
+    // padding-top: 30px;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.form-btn {
+  padding-top: 5px;
+  padding-bottom: 0;
+
+  @include tablet {
+    // padding-top: 55px;
+  }
+
+  .progress {
+    cursor: pointer;
+    position: relative;
+    //width: 140px;
+    //height: 50px;
+    width: 190px;
+    height: 60px;
+    letter-spacing: 1px;
+    //line-height: 50px;
+    line-height: 60px;
+    font-family: $font-semibold;
+    font-size: 1.6rem;
+    background-color: transparent;
+    overflow: hidden;
+    &.btn-submit{
+      padding: 0;
+      margin: 0;
+      border: 0 none;
+    }
+    &:hover {
+      .progress-bar {
+        width: 60%;
+      }
+    }
+  }
+
+  .progress .progress-text {
+    position: absolute;
+    top: 0;
+    //width: 140px;
+    width: 190px;
+    text-align: center;
+    color: $color-black;
+    left: 0;
+  }
+
+  .progress .progress-bar {
+    height: 100%;
+    overflow: hidden;
+    //width: 23%;
+    width: 30%;
+    background-color: $color-black;
+    border-radius: inherit;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s all linear;
+    display: block;
+    @include tablet {
+      width: 30%;
+    }
+  }
+
+  .progress .progress-bar .progress-text {
+    color: $color-white;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  max-width: 370px;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: $font-semibold;
+}
+
+.info {
+  padding: 5px 0;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.07rem;
+  font-family: $font-semibold;
+  color: rgba($color-black, 0.7);
+}
+
+.btn-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-family: $font-semibold;
+  cursor: pointer;
+  transition: 0.3s all linear;
+
+  &:hover {
+    color: $color-white;
+  }
+
+  @include tablet {
+    top: -17px;
+    font-size: 1.4rem;
+    right: -21px;
+  }
+
+  @include little-phone {
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.checkbox-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.config-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  //max-height: 180px;
+  max-width: 620px;
+  //padding: 3rem 0;
+  padding: 3rem 0 0;
+
+  @include middle-tablet {
+    //flex-wrap: nowrap;
+    //max-height: unset;
+  }
+}
+
+.form-mobile {
+  display: none;
+  margin-right: -10px;
+  margin-top: -100px;
+  transform: unset;
+  transform: scaleY(0);
+  transform-origin: top;
+  position: relative;
+  top: unset;
+  right: unset;
+  height: auto;
+  width: 100%;
+  transition: all 0.6s ease-in-out;
+
+  @include small-phone {
+    padding: 20px;
+  }
+
+  @include little-phone {
+    width: calc(100% + 10px);
+    margin-top: -105px;
+  }
+
+  .form-block {
+    padding: 20px 0;
+  }
+
+  .btn-close {
+    display: none;
+  }
+}
+
+.mob-form-opened {
+  transform: scaleY(1);
+}
+
+.contact-form {
+  padding: 80px 0;
+  display: flex;
+  justify-content: flex-end;
+  @include phone {
+    padding: 60px 0;
+    padding-left: 30px;
+  }
+  .form-block {
+    padding: 20px 0;
+  }
+  .form-title {
+    line-height: 1.3;
+    padding-bottom: 40px;
+    max-width: 450px;
+    @include menu-tablet {
+      padding-bottom: 20px;
+    }
+    @include tablet{
+      max-width: 275px;
+    }
+    @include phone {
+      padding-bottom: 0px;
+    }
+  }
+  .form-info{
+    padding-top: 5px;
+  }
+  .form-config {
+    //letter-spacing: 0.1rem;
+    padding-top: 30px;
+
+    @include tablet {
+      // padding-top: 27px;
+      letter-spacing: 0.08rem;
+    }
+    .config-wrapper{
+      padding-top: 20px;
+    }
+  }
+  .form-cont-block-open {
+    .form-wrap {
+      position: relative;
+      &:after {
+        display: block;
+        position: absolute;
+        content: "";
+        background-image: url('assets/static/logo-line.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        //background-position: 95% center;
+        background-position: right center;
+        height: 100%;
+        width: 100%;
+        max-width: 500px;
+        opacity: 0.1;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        @include desktop-min {
+          top: 10%;
+          //background-position: 100% center;
+          height: 90%;
+          width: 90%;
+        }
+        @include desktop-notebook {
+          display: none;
+        }
+      }
+    }
+  }
+  .form-wrapper {
+    //width: 80%;
+    width: 82%;
+    overflow: hidden;
+    padding-top: 120px;
+    padding-bottom: 84px;
+    padding-left: 130px;
+    padding-right: 120px;
+    //padding: 120px 125px 84px;
+    @include desktop-min{
+      padding-left: 80px;
+      padding-right: 30px;
+    }
+    @include tablet{
+      padding-top: 40px;
+      padding-bottom: 84px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include phone {
+      width: 100%;
+      padding-top: 40px;
+      padding-left: 30px;
+    }
+  }
+  .form-main-block {
+    transition: all 0.5s linear;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    max-height: 0;
+    height: 0;
+    visibility: hidden;
+
+    @include phone {
+      padding: 20px 0;
+    }
+  }
+  .main-open {
+    max-height: 800px;
+    height: auto;
+    transform: scaleY(1);
+    visibility: visible;
+  }
+  .main-open-show {
+    opacity: 1;
+  }
+  form {
+    //background-image: url('assets/img/png/lightning.png');
+    //background-size: contain;
+    //background-repeat: no-repeat;
+    //background-position: right center;
+    //@include desktop-little {
+    //  background-image: none;
+    //}
+  }
+  .form-btn {
+    padding-top: 50px;
+
+    @include menu-tablet {
+      padding-top: 20px;
+    }
+
+    @include phone {
+      padding-top: 20px;
+    }
+  }
+  .item-form-text{
+    //padding-bottom: 30px;
+    padding-top: 6px;
+    &:first-of-type{
+      padding-top: 30px;
+    }
+    input[type=text]{
+      line-height: 3.7rem;
+      min-height: 40px;
+    }
+  }
+  .item-form-textarea{
+    padding-top: 6px;
+    textarea{
+      min-height: 40px;
+    }
+  }
+  .submit-btn {
+    padding-top: 80px;
+    @include phone{
+      padding-top: 20px;
+    }
+    .progress .progress-text {
+      //width: 100px;
+      width: 125px;
+    }
+
+    .progress:hover .progress-bar {
+      width: 50%;
+    }
+  }
+  h4{
+    //padding-bottom: 25px;
+  }
+  .config-wrapper{
+    flex-direction: row;
+    max-width: 650px;
+    @include middle-tablet{
+
+    }
+    .checkbox-block{
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-bottom: 10px;
+      @include tablet{
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  .form-budget{
+    .form-head{
+      padding-bottom: 23px;
+    }
+
+  }
+}
+.contact-form-block{
+  input[type=text]{
+    line-height: 3.7rem;
+  }
+  .config-wrapper{
+    flex-direction: row;
+    max-width: 650px;
+    .checkbox-block{
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-bottom: 10px;
+    }
+  }
+}

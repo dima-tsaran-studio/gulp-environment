@@ -1,0 +1,302 @@
+.services {
+  .page-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include big-phone {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .info-title {
+      width: 100%;
+      max-width: 215px;
+      padding: 50px 0;
+      position: relative;
+
+      @include big-phone {
+        max-width: unset;
+        padding: 30px 0;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        background-image: url('assets/img/png/contacts-dots.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        top: 0;
+        right: 10px;
+        height: 100%;
+        width: 350px;
+      }
+
+      @include desktop-block {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .info-desc {
+      width: 100%;
+      max-width: 820px;
+
+      @include desktop-block {
+        width: 60%;
+      }
+
+      @include custom-phone {
+        padding-left: 20px;
+      }
+
+      @include big-phone {
+        padding-left: 0;
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
+
+  .title {
+    font-family: $font-book;
+    font-size: 3.4rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.1rem;
+    color: $color-white;
+
+    @include tablet {
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+    }
+  }
+
+  .desc {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    line-height: 2.4rem;
+    color: rgba($color-white, 0.6);
+  }
+
+  .solution {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include desktop-block {
+      //flex-direction: column;
+      padding-bottom: 40px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .title {
+      font-family: $font-bold;
+      font-size: 6.2rem;
+      letter-spacing: 0.1rem;
+      line-height: 6.4rem;
+
+      @include tablet {
+        font-size: 5rem;
+        line-height: 5.4rem;
+      }
+
+      @include big-phone {
+        max-width: 160px;
+        font-size: 3rem;
+        line-height: 3.2rem;
+      }
+    }
+
+    .desc {
+      padding-top: 50px;
+
+      @include desktop-block {
+        padding-top: 30px;
+      }
+    }
+  }
+
+  .block-title {
+    padding: 150px 0;
+    max-width: 370px;
+    //width: 100%;
+    flex: 0 0 40%;
+    @include desktop-block {
+      padding: 40px 0;
+      flex: 0 0 100%;
+      //max-width: unset;
+    }
+  }
+
+  .benefits-block {
+    display: flex;
+    width: 100%;
+
+    @include desktop-block {
+      flex-wrap: wrap;
+    }
+  }
+
+  .benefit {
+    padding: 0 35px;
+    max-width: 33.3%;
+    width: 100%;
+    @include desktop-block {
+      max-width: 50%;
+      padding-bottom: 20px;
+      padding-top: 20px;
+
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+
+    @include big-phone {
+      max-width: 100%;
+      padding: 20px 0;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    .title {
+      font-family: $font-bold;
+      font-size: 1.8rem;
+      width: auto;
+      padding: 5px 0;
+
+      .title-text {
+        position: relative;
+        transition: 0.3s all linear;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          bottom: -15px;
+          left: 0;
+          height: 2px;
+          background-color: $color-yellow;
+          transition: 0.3s all linear;
+        }
+        &:hover {
+          color: $color-yellow;
+
+          &:after {
+            width: 25%;
+          }
+        }
+      }
+    }
+
+    .desc {
+      padding: 15px 0;
+      font-size: 1.6rem;
+      word-wrap: break-word;
+    }
+  }
+
+  .technologies-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    width: 100%;
+    @include desktop-block {
+      justify-content: flex-start;
+      padding-top: 40px;
+    }
+  }
+
+  .technology {
+    //max-width: 16.667%;
+    flex: 0 0 16.5%;
+    display: flex;
+    max-width: 203px;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    transition: all 0.3s linear;
+    .svg-block{
+      width: 100%;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    @include desktop-block {
+      //max-width: 20%;
+      flex: 0 0 20%;
+    }
+    @include phone {
+      //max-width: 33.3%;
+      flex: 0 0 33.3%;
+    }
+    @include big-phone {
+      //max-width: 33.3%;
+      flex: 0 0 33.3%;
+    }
+
+    @include little-phone {
+      padding: 10px;
+    }
+
+    .icon {
+      width: 100%;
+      height: auto;
+      max-height: 100px;
+      transition: 0.3s all linear;
+
+      &:hover {
+        fill: $color-yellow;
+      }
+    }
+  }
+
+  .mob-technologies {
+    justify-content: flex-start;
+
+    @include desktop-block {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .technology {
+      //padding: 0;
+      padding: 0 40px;
+      flex: 0 0 25%;
+      @include desktop-block {
+        padding: 10px;
+      }
+      @include desktop-block {
+        //max-width: 20%;
+        flex: 0 0 25%;
+      }
+      @include phone {
+        //max-width: 33.3%;
+        flex: 0 0 33.3%;
+      }
+      @include little-phone {
+        padding: 10px;
+      }
+    }
+  }
+
+  .icon-arrow {
+    fill: $color-black;
+    height: 10px;
+    width: 70px;
+    display: flex;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,187 @@
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  min-height: 100%;
+  min-width: 100%;
+  -webkit-transform-style: preserve-3d;
+  z-index: -100;
+  background-color: $color-black;
+  background-position: center center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  @include menu-tablet {
+    display: none;
+  }
+
+  video {
+    //height: 100vh;
+  }
+}
+*[data-href]{
+  cursor: pointer;
+}
+.home {
+  @include desktop-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  @include phone {
+    // height: calc(100vh - 130px);
+    display: flex;
+  }
+
+  .home-block {
+    display: flex;
+    align-items: center;
+
+    @include desktop-block {
+      flex-direction: column-reverse;
+    }
+
+  }
+
+  .col {
+    @include desktop-block {
+      padding: 15px 0;
+    }
+
+    @include small-phone {
+      padding: 0;
+    }
+  }
+
+  .img-block {
+    @include desktop-block {
+      max-width: 60%;
+    }
+
+    @include little-phone {
+      max-width: 80%;
+    }
+
+    @include small-phone {
+      max-width: 80%;
+      margin-right: 22px;
+    }
+  }
+
+
+  .home-left {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include desktop-block {
+      flex: 0 0 100%;
+    }
+
+    @include small-phone {
+      padding: 0;
+    }
+
+  }
+
+  .home-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include desktop-block {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      max-height: 550px;
+    }
+
+    @include middle-tablet {
+      // height: 55vh;
+    }
+
+    @include small-phone {
+      padding-bottom: 42px;
+    }
+
+    .img-block {
+      display: flex;
+      justify-content: center;
+      max-width: 330px;
+
+      img {
+        height: 100%;
+        width: auto;
+        max-width: unset;
+        object-fit: contain;
+      }
+
+      @include middle-tablet {
+        max-width: 100%;
+        max-height: 55vh;
+        width: auto;
+      }
+    }
+  }
+
+  .after-img {
+    right: 0;
+    top: 0;
+    position: absolute;
+
+    @include desktop-block {
+      display: none;
+    }
+  }
+
+  .name-block {
+    color: $color-white;
+
+    @include phone {
+      text-align: center;
+    }
+
+    .name-desc {
+      font-family: $font-semibold;
+      font-size: 1.8rem;
+      letter-spacing: 0.55rem;
+      text-transform: uppercase;
+      padding-bottom: 12px;
+
+      @include portrait-tablet {
+        font-size: 1.6rem;
+      }
+
+      @include small-phone {
+        font-size: 1.4rem;
+        letter-spacing: 0.41rem;
+      }
+
+    }
+
+    .name-title {
+      font-family: $font-bold;
+      font-size: 10.4rem;
+
+      @include portrait-tablet {
+        font-size: 8rem;
+      }
+      @include phone{
+        font-size: 7rem;
+      }
+      @include little-phone {
+        font-size: 6rem;
+      }
+
+      @include small-phone {
+        font-size: 3.6rem;
+      }
+    }
+  }
+}
